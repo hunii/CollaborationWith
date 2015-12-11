@@ -1,0 +1,157 @@
+<script type='text/javascript'>
+$(function() {
+  // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
+  // Dashing.gridsterLayout('[{"col":2,"row":1},{"col":1,"row":1},{"col":3,"row":1},{"col":2,"row":2},{"col":3,"row":2},{"col":1,"row":2},{"col":5,"row":1},{"col":4,"row":2},{"col":2,"row":3}]')
+  Dashing.widget_base_dimensions = [400, 370]
+  Dashing.numColumns = 5
+});
+</script>
+
+
+
+<!-- Custom Alert box CSS -->
+<style>
+#dialogoverlay{
+  display: none;
+  opacity: .8;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: #FFF;
+  width: 100%;
+  z-index: 10;
+}
+#dialogbox{
+  margin: auto;
+  display: none;
+  position: fixed;
+  background: #000;
+  border-radius:15px; 
+  width:700;
+  z-index: 10;
+}
+#dialogbox > div{ background:#FFF; margin:8px; }
+#dialogbox > div > #dialogboxhead{  background: #888; font-size:30px; padding:15px; color:#CCC; }
+#dialogbox > div > #dialogboxbody{ background:#555; font-size:30px; padding:30px; color:#CCC; }
+#dialogbox > div > #dialogboxfoot{ background: #888; padding:15px; text-align:right; }
+</style>
+<script>
+function CustomAlert(){
+    this.render = function(dialog){
+        var winW = window.innerWidth;
+        var winH = window.innerHeight;
+        var dialogoverlay = document.getElementById('dialogoverlay');
+        var dialogbox = document.getElementById('dialogbox');
+        dialogoverlay.style.display = "block";
+        dialogoverlay.style.height = winH+"px";
+        dialogbox.style.left = (winW/2) - (550 * .5)+"px";
+        dialogbox.style.top = "550px";
+        dialogbox.style.display = "block";
+        document.getElementById('dialogboxhead').innerHTML = "";
+        document.getElementById('dialogboxbody').innerHTML = dialog;
+        document.getElementById('dialogboxfoot').innerHTML = "";
+    } 
+      this.ok = function(){
+        document.getElementById('dialogbox').style.display = "none";
+        document.getElementById('dialogoverlay').style.display = "none";
+      }
+}
+var Alert = new CustomAlert();
+</script>
+<!-- Custom Alert box CSS ..END -->
+
+
+<% content_for :title do %>James Joung<% end %>
+
+<div class="gridster">
+
+    <div id="dialogoverlay"></div>
+      <div id="dialogbox">
+        <div>
+            <div id="dialogboxhead"></div>
+            <div id="dialogboxbody"></div>
+            <div id="dialogboxfoot"></div>
+        </div>
+      </div>
+    <script>
+        Alert.render("You must be here to hire me! <br>Enjoy the site!")
+        setTimeout(function() { Alert.ok(); }, 4000);
+    </script>
+
+
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1" style='background-color:#222222;'>
+      <div style='background-color:#222222;' data-view="Image" data-image="/jj_image.png"></div><a href="/assets/cv_jjoung.pdf" style="text-align: center; text-size: 10px; text-decoration: underline; position: absolute; right: 110px; bottom: 0px;"><img src="/assets/download-logo3.gif" alt="Download_logo" width="40" height="40"> Curriculum vitae</a>
+    </li>
+
+    <li data-row="1" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-id="p_detail" data-view="Comments" style="font-size:30px" data-title="About" style="background-color:#ff9618;" data-moreinfo=""></div>
+      <i class="icon-user icon-background"></i>
+    </li>
+
+    <li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
+      <div data-id="skill_area" data-view="Fullpie" data-title="Programming"></div>
+    </li>
+
+    <li data-row="2" data-col="1" data-sizex="2" data-sizey="1">
+      <div style='background-color:#7b4bc3;' data-id="experience_list" data-view="List" data-unordered="true" data-title="Experience" style="font-size:90%" data-moreinfo=""></div>
+      <i class="icon-save icon-background"></i>
+    </li>
+
+    <li data-row="2" data-col="3" data-sizex="1" data-sizey="1">
+      <div data-id="on_or_off" data-view="Vacancy"></div>
+      <i class="fa fa-check"></i>
+    </li>
+
+    <li data-row="2" data-col="4" data-sizex="1" data-sizey="1">
+      <div data-id="testoff" data-view="Vacancy"></div>
+      <i class="fa fa-check"></i>
+    </li>
+
+    <li data-row="3" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="education_list" data-view="List" data-unordered="true" data-title="Education" style="font-size:90%" data-moreinfo=""></div>
+      <i class="icon-book icon-background"></i>
+    </li>
+
+
+
+
+
+
+
+<!--     <li data-row="3" data-col="3" data-sizex="3" data-sizey="3">
+      <div data-id='facebook_posts' data-view='FacebookPosts' data-title='Facebook Info'></div>
+    </li> -->
+    
+
+
+
+
+  </ul>
+
+  <span data-id="youtube" data-view="Youtube" data-title="youtube" style="padding: 0px"></span>
+
+
+</div>
+
+
+<div class="footer" style="position: relative; top: 50; text-align: center; color:#555555">
+    <script language="javascript"> 
+  months = ['January', 'Febraury', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']; 
+  var theDate = new Date(document.lastModified); 
+  with (theDate) { 
+  document.write("<i>Last updated "+': '+months[getMonth()]+' '+(1900+getYear())+' '+"</i>") 
+  } 
+  </script>
+</div>
+
+
+<!--   <div class="fb-page" data-href="https://www.facebook.com/MYOB/" style ="position:relative; top: -1050px; left: 1525px;" data-width="330" data-height="1080" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true">
+  <div class="fb-xfbml-parse-ignore">
+  <blockquote cite="https://www.facebook.com/jjoung1/"><a href="https://www.facebook.com/jjoung1/">MYOB</a></blockquote></div></div>
+
+
+  <iframe id="ytplayer" type="text/html" width="720" height="680" style ="position:relative; top: -1100px; left: 450px;"
+  src="https://www.youtube.com/embed/?listType=playlist&list=PLyNexh_9F_-MZRzeWWl-er3ris6_Z3MFE&autoplay=1&loop=1"
+  frameborder="0" allowfullscreen> -->
+ 
