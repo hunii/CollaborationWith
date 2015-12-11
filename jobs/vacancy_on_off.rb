@@ -2,15 +2,14 @@
 
 
 SCHEDULER.every '1d', :first_in => 0 do |job|
-    # 'y' or 'n'
-	iamfree = 'y'
 
-	if iamfree == 'y'
-    	on_off = [{:name=>"I am looking for job", :body=>"green"}]
-    elsif iamfree == 'n'
-		on_off = [{:name=>"I am NOT looking for job", :body=>"red"}]
-	end
+    want = [{:name=>"I am looking for job", :body=>"green"}]
 
-	send_event 'on_or_off', { comments: on_off } 
+	have = [{:name=>"I am <ins>not</ins> looking for job", :body=>"red"}]
+
+	# Looking for job
+	send_event 'want_job', { comments: want } 
+	# Not looking for job
+	send_event 'have_job', { comments: have } 
 
 end
