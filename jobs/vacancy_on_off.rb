@@ -13,11 +13,4 @@ SCHEDULER.every '1d', :first_in => 0 do |job|
 
 	send_event 'on_or_off', { comments: on_off } 
 
-
-
-	on_off2 = [{:name=>"I am NOT looking for job", :body=>"red"}]
-	send_event 'testoff', { comments: on_off2 } 
-
-
-
 end
