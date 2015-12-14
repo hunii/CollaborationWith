@@ -61,6 +61,96 @@ var Alert = new CustomAlert();
 <!-- Custom Alert box CSS ..END -->
 
 
+
+<!-- Custom Email -->
+<style>
+  #from {
+    position: absolute;
+    left : 220px;
+    top  : 105px;
+  }
+
+  #reply {
+    position: absolute;
+    left : 220px;
+    top  : 170px;
+  }
+
+  #message {
+    position: absolute;
+    left : 20px;
+    top  : 70px;
+  }
+
+  form {
+    background: rgba(0,0,0,0.1);
+  }
+
+  input, textarea {
+    font    : .9em/1.5em "handwriting", sans-serif;
+    border  : none;
+    margin  : 0;
+    width   : 240px;
+    display : block;
+    padding : 0px 5px 0px 5px;
+    margin  : 10px 0 0 -10px;
+    width   : 170px;
+    height  : 137px;
+    border-radius: 10px;
+    resize  : none;
+    overflow: auto;
+    background: rgba(0,0,0,0.1);
+  }
+
+  input:focus, textarea:focus {
+    background   : rgba(0,0,0,0.2);
+    outline      : none;
+  }
+
+  input {
+      height: 2.5em; /* for IE */
+      vertical-align: middle; /* This is optional but it makes legacy IEs look better */
+  }
+
+  button {
+    position     : absolute;
+    left         : 260px;
+    top          : 90px;
+
+    padding      : 5px;
+
+    font         : bold .6em sans-serif;
+    border       : 2px solid #333;
+    border-radius: 5px;
+    background   : none;
+
+    cursor       : pointer;
+
+  -webkit-transform: rotate(-4.5deg);
+     -moz-transform: rotate(-4.5deg);
+      -ms-transform: rotate(-4.5deg);
+       -o-transform: rotate(-4.5deg);
+          transform: rotate(-4.5deg);
+  }
+
+  button:after {
+    content: " >>>";
+  }
+
+  button:hover,
+  button:focus {
+    outline   : none;
+    background: #000;
+    color   : #FFF;
+  }
+</style>
+
+<!-- Custom Email.. END -->
+
+
+
+
+
 <% content_for :title do %>James Joung<% end %>
 
 <div class="gridster">
@@ -95,7 +185,27 @@ var Alert = new CustomAlert();
     </li>
 
     <li data-row="1" data-col="4" data-sizex="1" data-sizey="1">
-      <div data-id="send_email" data-view="Email" data-title="Flick an Email"></div>
+            <form style="border-radius: 10%;" action="MAILTO:jjoung@hotmail.co.nz" method="post" enctype="text/plain">
+              <h1>Flick an email</h1>
+              <div id="from">
+                <label for="name">from:</label><br>
+                <input type="text" id="name" name="Name :">
+              </div>
+
+              <div id="reply">
+                <label for="mail">reply:</label><br>
+                <input type="email" id="mail" name="Email :">
+              </div>
+
+              <div id="message">
+                <label for="msg">comments:</label>
+                <textarea id="msg" name="Message :"></textarea>
+              </div>
+             
+              <div class="button">
+                <button type="submit">Send your message</button>
+              </div>
+            </form>
       <i class="icon-user icon-background"></i>
     </li>
 
@@ -108,6 +218,7 @@ var Alert = new CustomAlert();
     <li data-row="2" data-col="3" data-sizex="1" data-sizey="1">
       <div data-id="want_job" data-view="Vacancy"></div>
     </li>
+
 
     <!-- Row 3 -->
     <li data-row="3" data-col="1" data-sizex="2" data-sizey="1">
