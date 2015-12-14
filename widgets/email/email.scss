@@ -57,7 +57,7 @@ $background-color:  #dc5945;
 	    vertical-align: middle; /* This is optional but it makes legacy IEs look better */
 	}
 
-	button {
+	.button {
 	  position     : absolute;
 	  left         : 260px;
 	  top          : 90px;
@@ -78,11 +78,11 @@ $background-color:  #dc5945;
 	        transform: rotate(-4.5deg);
 	}
 
-	button:after {
+	.button:after {
 	  content: " >>>";
 	}
 
-	button:hover,
+	.button:hover,
 	button:focus {
 	  outline   : none;
 	  background: #000;

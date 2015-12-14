@@ -1,18 +1,19 @@
 
 <form style="border-radius: 10%;" action="MAILTO:jjoung@hotmail.co.nz" method="post" enctype="text/plain">
-	<h1>Flick an email</h1>
+<!-- 	<h1>Flick an email</h1> -->
+	<h1 data-bind="title"></h1>
 
-  <div id="from">
+  <div class="from">
     <label for="name">from:</label><br>
     <input type="text" id="name" name="Name :">
   </div>
 
-  <div id="reply">
+  <div class="reply">
     <label for="mail">reply:</label><br>
     <input type="email" id="mail" name="Email :">
   </div>
 
-  <div id="message">
+  <div class="message">
     <label for="msg">comments:</label>
     <textarea id="msg" name="Message :"></textarea>
   </div>
