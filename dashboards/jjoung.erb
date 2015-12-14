@@ -45,7 +45,7 @@ function CustomAlert(){
         dialogoverlay.style.display = "block";
         dialogoverlay.style.height = winH+"px";
         dialogbox.style.left = (winW/2) - (550 * .5)+"px";
-        dialogbox.style.top = "550px";
+        dialogbox.style.top = "520px";
         dialogbox.style.display = "block";
         document.getElementById('dialogboxhead').innerHTML = "";
         document.getElementById('dialogboxbody').innerHTML = dialog;
@@ -167,8 +167,8 @@ var Alert = new CustomAlert();
         </div>
       </div>
     <script>
-        Alert.render("You must be here to hire me! <br>Enjoy the site!")
-        setTimeout(function() { Alert.ok(); }, 4000);
+        Alert.render("You must be here to hire me! <br>Move My Widgets! <br>Enjoy the site!")
+        setTimeout(function() { Alert.ok(); }, 5000);
     </script>
 
 
@@ -190,7 +190,7 @@ var Alert = new CustomAlert();
     <li data-row="1" data-col="4" data-sizex="1" data-sizey="1" style='background-color:#222222; border-radius: 10%;'>
       <div style='background-color:#222222;' data-id="email_system" data-view="Emptywidget"></div>
       <form action="MAILTO:jjoung@hotmail.co.nz" method="post" enctype="text/plain">
-              <h1 id="head_title">Flick an email</h1>
+              <h1 id="head_title">Flick me an email</h1>
               <div id="from">
                 <label for="name">from:</label><br>
                 <input type="text" id="name" name="Name : ">
