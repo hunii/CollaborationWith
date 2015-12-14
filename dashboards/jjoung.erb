@@ -211,10 +211,33 @@ var Alert = new CustomAlert();
     </li>
 
     <li data-row="1" data-col="5" data-sizex="1" data-sizey="1" style='background-color:#222222;'>
-      <div style='background-color:#222222;' data-view="Image" data-image="/jj_image.png"></div><a href="/assets/cv_jjoung.pdf" style="text-align: center; text-size: 10px; text-decoration: underline; position: absolute; right: 110px; bottom: 0px;"><input type="text" id="name" name="Name :"><img src="/assets/download-logo3.gif" alt="Download_logo" width="40" height="40"> Curriculum vitae</a>
+      <div style='background-color:#222222;' data-view="Email"></div>
+      <form style="border-radius: 10%;" action="MAILTO:jjoung@hotmail.co.nz" method="post" enctype="text/plain">
+              <h1>Flick an email</h1>
+              <div id="from">
+                <label for="name">from:</label><br>
+                <input type="text" id="name" name="Name :">
+              </div>
+
+              <div id="reply">
+                <label for="mail">reply:</label><br>
+                <input type="email" id="mail" name="Email :">
+              </div>
+
+              <div id="message">
+                <label for="msg">comments:</label>
+                <textarea id="msg" name="Message :"></textarea>
+              </div>
+             
+              <div class="button">
+                <button type="submit">Send your message</button>
+              </div>
+            </form>
     </li>
+
+
     <li data-row="2" data-col="5" data-sizex="1" data-sizey="1" style='background-color:#222222;'>
-      <div style='background-color:#222222;' data-view="" data-image=""></div><input type="text" id="name" name="Name :"><a href="/assets/cv_jjoung.pdf" style="text-align: center; text-size: 10px; text-decoration: underline; position: absolute; right: 110px; bottom: 0px;"><img src="/assets/download-logo3.gif" alt="Download_logo" width="40" height="40"> Curriculum vitae</a>
+      <div style='background-color:#222222;' data-view="Email"></div><input type="text" id="name" name="Name :">
     </li>
 
 
