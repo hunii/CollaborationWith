@@ -26,14 +26,14 @@ $(function() {
   display: none;
   position: fixed;
   background: #000;
-  border-radius:15px; 
+  border-radius:15px; s
   width:700;
   z-index: 10;
 }
-#dialogbox > div{ background:#FFF; margin:8px; }
-#dialogbox > div > #dialogboxhead{  background: #888; font-size:30px; padding:15px; color:#CCC; }
-#dialogbox > div > #dialogboxbody{ background:#555; font-size:30px; padding:30px; color:#CCC; }
-#dialogbox > div > #dialogboxfoot{ background: #888; padding:15px; text-align:right; }
+#dialogbox > div{ background:#FFF; margin:8px; border-radius: 20px; }
+#dialogbox > div > #dialogboxhead{ font-size:30px; padding:15px; color:#CCC; }
+#dialogbox > div > #dialogboxbody{ font-size:30px; padding:30px; color:#CCC; font-weight: bold;}
+#dialogbox > div > #dialogboxfoot{ padding:15px; text-align:right; }
 </style>
 <script>
 function CustomAlert(){
@@ -45,7 +45,7 @@ function CustomAlert(){
         dialogoverlay.style.display = "block";
         dialogoverlay.style.height = winH+"px";
         dialogbox.style.left = (winW/2) - (550 * .5)+"px";
-        dialogbox.style.top = "520px";
+        dialogbox.style.top = "500px";
         dialogbox.style.display = "block";
         document.getElementById('dialogboxhead').innerHTML = "";
         document.getElementById('dialogboxbody').innerHTML = dialog;
@@ -126,7 +126,7 @@ var Alert = new CustomAlert();
     font         : bold .6em sans-serif;
     border       : 2px solid #333;
     border-radius: 5px;
-    background   : rgba(100,100,100,1);
+    background   : rgba(150,150,150,1);
     cursor       : pointer;
 
   -webkit-transform: rotate(-4.5deg);
@@ -167,7 +167,7 @@ var Alert = new CustomAlert();
         </div>
       </div>
     <script>
-        Alert.render("You must be here to hire me! <br>Move My Widgets! <br>Enjoy the site!")
+        Alert.render("You must be here to hire me! <br>Enjoy the site! <br><br>Try Moving Widgets!")
         setTimeout(function() { Alert.ok(); }, 5000);
     </script>
 
