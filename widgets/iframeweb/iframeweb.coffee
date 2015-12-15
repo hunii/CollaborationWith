@@ -1,5 +1,5 @@
 
-class Dashing.Iframe extends Dashing.Widget
+class Dashing.Iframeweb extends Dashing.Widget
 
   ready: ->
     $(@node).find(".iframe").attr('src', @get('src'))
