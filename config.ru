@@ -3,7 +3,9 @@ require 'dashing'
 configure do
   set :auth_token, ''
   set :default_dashboard, 'jjoung'
+  set :protection, :except => :frame_options
 
+  
   helpers do
     def protected!
      # Put any authentication code you want in here.
