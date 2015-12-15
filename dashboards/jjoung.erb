@@ -43,8 +43,19 @@ $(function() {
 
     <li data-row="1" data-col="4" data-sizex="2" data-sizey="3">
       <div style='background-color:#222222;' data-id="web_view" data-view="Emptywidget"></div>
-      <iframe src="https://www.google.com" width="100%" height="100%"></iframe>
+      <iframe id="iframework" src="https://www.google.com"></iframe>
     </li>
+
+<style>
+#iframework {
+    position: absolute;
+    left : 0px;
+    top  : 0px;
+    width:  100%; 
+    height: 100%;
+  }
+</style>
+
 
 
     <!-- Row 2 -->
