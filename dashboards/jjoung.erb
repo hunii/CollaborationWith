@@ -11,21 +11,6 @@ $(function() {
 <% content_for :title do %>James Joung<% end %>
 
 <div class="gridster">
-
-    <div id="dialogoverlay"></div>
-      <div id="dialogbox">
-        <div>
-            <div id="dialogboxhead"></div>
-            <div id="dialogboxbody"></div>
-            <div id="dialogboxfoot"></div>
-        </div>
-      </div>
-    <script>
-        Alert.render("You must be here to hire me! <br>Enjoy the site! <br><br>Try Moving the Widgets Around!")
-        setTimeout(function() { Alert.ok(); }, 5000);
-    </script>
-
-
   <ul>
     <!-- Row 1 -->
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1" style='background-color:#222222;'>
@@ -43,7 +28,7 @@ $(function() {
 
     <li data-row="1" data-col="4" data-sizex="2" data-sizey="3">
       <div style='background-color:#222222;' data-id="web_view" data-view="Emptywidget"></div>
-      <iframe id="iframework" src="http://www.w3schools.com/tags/tag_span.asp"></iframe>
+      <iframe id="iframework" src="/assets/download-logo3.gif"></iframe>
     </li>
 
 <style>
@@ -116,7 +101,25 @@ $(function() {
 
 
 </div>
+<!-- Gridster End .. -->
 
+
+
+<!-- Popup diaglog Box -->
+    <div id="dialogoverlay"></div>
+      <div id="dialogbox">
+        <div>
+            <div id="dialogboxhead"></div>
+            <div id="dialogboxbody"></div>
+            <div id="dialogboxfoot"></div>
+        </div>
+      </div>
+    <script>
+        Alert.render("You must be here to hire me! <br>Enjoy the site! <br><br>Try Moving the Widgets Around!")
+        setTimeout(function() { Alert.ok(); }, 5000);
+    </script>
+
+    
 
 <div class="footer" style="position: relative; top: 50; text-align: center; color:#555555">
     <script language="javascript"> 
