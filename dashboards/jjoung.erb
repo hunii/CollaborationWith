@@ -11,6 +11,22 @@ $(function() {
 <% content_for :title do %>James Joung<% end %>
 
 <div class="gridster">
+
+<!-- Popup diaglog Box -->
+    <div id="dialogoverlay"></div>
+      <div id="dialogbox">
+        <div>
+            <div id="dialogboxhead"></div>
+            <div id="dialogboxbody"></div>
+            <div id="dialogboxfoot"></div>
+        </div>
+      </div>
+    <script>
+        Alert.render("You must be here to hire me! <br>Enjoy the site! <br><br>Try Moving the Widgets Around!")
+        setTimeout(function() { Alert.ok(); }, 5000);
+    </script>
+
+    
   <ul>
     <!-- Row 1 -->
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1" style='background-color:#222222;'>
@@ -35,11 +51,11 @@ $(function() {
 #iframework {
     position: absolute;
     left : 0px;
-    top  : 40px;
+    top  : 20px;
     width:  100%;   
     height: 800px;
     background-color: #fff;
-    border-radius: 10%;
+    border-radius: 5%;
   }
 </style>
 
@@ -109,20 +125,6 @@ $(function() {
 <!-- Gridster End .. -->
 
 
-
-<!-- Popup diaglog Box -->
-    <div id="dialogoverlay"></div>
-      <div id="dialogbox">
-        <div>
-            <div id="dialogboxhead"></div>
-            <div id="dialogboxbody"></div>
-            <div id="dialogboxfoot"></div>
-        </div>
-      </div>
-    <script>
-        Alert.render("You must be here to hire me! <br>Enjoy the site! <br><br>Try Moving the Widgets Around!")
-        setTimeout(function() { Alert.ok(); }, 5000);
-    </script>
 
 
 
