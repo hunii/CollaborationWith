@@ -11,22 +11,6 @@ $(function() {
 <% content_for :title do %>James Joung<% end %>
 
 <div class="gridster">
-
-<!-- Popup diaglog Box -->
-    <div id="dialogoverlay"></div>
-      <div id="dialogbox">
-        <div>
-            <div id="dialogboxhead"></div>
-            <div id="dialogboxbody"></div>
-            <div id="dialogboxfoot"></div>
-        </div>
-      </div>
-    <script>
-        Alert.render("You must be here to hire me! <br>Enjoy the site! <br><br>Try Moving the Widgets Around!")
-        setTimeout(function() { Alert.ok(); }, 5000);
-    </script>
-
-
   <ul>
     <!-- Row 1 -->
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1" style='background-color:#222222;'>
@@ -53,7 +37,7 @@ $(function() {
     left : 0px;
     top  : 20px;
     width:  100%;   
-    height: 800px;
+    height: 95%;
     background-color: #fff;
     border-radius: 5%;
   }
@@ -150,148 +134,5 @@ $(function() {
 
 
 
-
-
-
-<!-- Custom Alert box CSS -->
-<style>
-#dialogoverlay{
-  display: none;
-  opacity: .8;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  background: #FFF;
-  width: 100%;
-  z-index: 10;
-}
-#dialogbox{
-  margin: auto;
-  display: none;
-  position: fixed;
-  background: #000;
-  border-radius:20px; 
-  width:700;
-  z-index: 10;
-}
-#dialogbox > div{ background:#FFF; margin:8px; border-radius: 20px; }
-#dialogbox > div > #dialogboxhead{ font-size:30px; padding:20px; color:#CCC; }
-#dialogbox > div > #dialogboxbody{ font-size:30px; padding:50px; color:#282828; font-weight: bold;}
-#dialogbox > div > #dialogboxfoot{ padding:20px; text-align:right; }
-</style>
-<script>
-function CustomAlert(){
-    this.render = function(dialog){
-        var winW = window.innerWidth;
-        var winH = window.innerHeight;
-        var dialogoverlay = document.getElementById('dialogoverlay');
-        var dialogbox = document.getElementById('dialogbox');
-        dialogoverlay.style.display = "block";
-        dialogoverlay.style.height = winH+"px";
-        dialogbox.style.left = (winW/2) - (550 * .5)+"px";
-        dialogbox.style.top = (winH/2) - (150)+"px";
-        dialogbox.style.display = "block";
-        document.getElementById('dialogboxhead').innerHTML = "";
-        document.getElementById('dialogboxbody').innerHTML = dialog;
-        document.getElementById('dialogboxfoot').innerHTML = "";
-    } 
-      this.ok = function(){
-        document.getElementById('dialogbox').style.display = "none";
-        document.getElementById('dialogoverlay').style.display = "none";
-      }
-}
-var Alert = new CustomAlert();
-</script>
-<!-- Custom Alert box CSS ..END -->
-
-
-
-<!-- Custom Email -->
-<style>
-  #head_title {
-    position: absolute;
-    left : 25px;
-    top  : 50px;
-  }
-
-  #from {
-    position: absolute;
-    left : 215px;
-    top  : 150px;
-  }
-
-  #reply {
-    position: absolute;
-    left : 215px;
-    top  : 235px;
-  }
-
-  #message {
-    position: absolute;
-    left : 20px;
-    top  : 110px;
-  }
-
-  form {
-    background: rgba(0,0,0,0.1);
-  }
-
-  input, textarea {
-    font    : .9em/1.5em "handwriting", sans-serif;
-    border  : none;
-    margin  : 0;
-    width   : 240px;
-    display : block;
-    padding : 0px 5px 0px 5px;
-    margin  : 10px 0 0 -10px;
-    width   : 170px;
-    height  : 170px;
-    border-radius: 10px;
-    resize  : none;
-    overflow: auto;
-    background: rgba(200,200,200,1);
-  }
-
-  input:focus, textarea:focus {
-    background   : rgba(150,150,150,1);
-    outline      : none;
-  }
-
-  input {
-      height: 2.5em; /* for IE */
-      vertical-align: middle; /* This is optional but it makes legacy IEs look better */
-  }
-
-  button {
-    position     : absolute;
-    left         : 215px;
-    top          : 100px;
-    padding      : 5px;
-    font         : bold .7em sans-serif;
-    border       : 2px solid #333;
-    border-radius: 5px;
-    background   : rgba(150,150,150,1);
-    cursor       : pointer;
-
-  -webkit-transform: rotate(-4.5deg);
-     -moz-transform: rotate(-4.5deg);
-      -ms-transform: rotate(-4.5deg);
-       -o-transform: rotate(-4.5deg);
-          transform: rotate(-4.5deg);
-  }
-
-  button:after {
-    content: " >>>";
-  }
-
-  button:hover,
-  button:focus {
-    outline   : none;
-    background: #000;
-    color   : #FFF;
-  }
-</style>
-
-<!-- Custom Email.. END -->
 
 

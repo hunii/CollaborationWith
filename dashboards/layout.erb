@@ -66,8 +66,6 @@ var Alert = new CustomAlert();
 </script>
 <!-- Custom Alert box CSS ..END -->
 
-
-
 <!-- Custom Email -->
 <style>
   #head_title {
@@ -156,8 +154,20 @@ var Alert = new CustomAlert();
 
 <!-- Custom Email.. END -->
 
-
-
+<!-- Popup diaglog Box -->
+    <div id="dialogoverlay"></div>
+      <div id="dialogbox">
+        <div>
+            <div id="dialogboxhead"></div>
+            <div id="dialogboxbody"></div>
+            <div id="dialogboxfoot"></div>
+        </div>
+      </div>
+    <script>
+        Alert.render("You must be here to hire me! <br>Enjoy the site! <br><br>Try Moving the Widgets Around!")
+        setTimeout(function() { Alert.ok(); }, 5000);
+    </script>
+<!-- Popup diaglog Box.. END -->
 
 </head>
   <body>
