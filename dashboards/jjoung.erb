@@ -22,8 +22,26 @@ $(function() {
       <i class="icon-user icon-background"></i>
     </li>
 
-    <li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
-      <div data-id="skill_area" data-view="Fullpie" data-title="Programming"></div>
+    <li data-row="1" data-col="3" data-sizex="1" data-sizey="1" style='background-color:#222222; border-radius: 10%;'>
+      <div style='background-color:#222222;' data-id="email_system" data-view="Emptywidget"></div>
+        <form action="MAILTO:jjoung@hotmail.co.nz" method="post" enctype="text/plain">
+            <h1 id="head_title">Flick me an email</h1>
+            <div id="from">
+                <label for="name">from:</label><br>
+                <input type="text" id="name" name="Name : ">
+            </div>
+            <div id="reply">
+                <label for="mail">reply:</label><br>
+                <input type="email" id="mail" name="Email : ">
+            </div>
+            <div id="message">
+                <label for="msg">message:</label>
+                <textarea id="msg" name="Message : "></textarea>
+            </div>
+            <div class="button">
+                <button type="submit">Send your message</button>
+            </div>
+        </form>
     </li>
 
     <li data-row="1" data-col="4" data-sizex="2" data-sizey="3">
@@ -48,27 +66,11 @@ $(function() {
       <i class="icon-book icon-background"></i>
     </li>
 
-    <li data-row="3" data-col="3" data-sizex="1" data-sizey="1" style='background-color:#222222; border-radius: 10%;'>
-      <div style='background-color:#222222;' data-id="email_system" data-view="Emptywidget"></div>
-        <form action="MAILTO:jjoung@hotmail.co.nz" method="post" enctype="text/plain">
-            <h1 id="head_title">Flick me an email</h1>
-            <div id="from">
-                <label for="name">from:</label><br>
-                <input type="text" id="name" name="Name : ">
-            </div>
-            <div id="reply">
-                <label for="mail">reply:</label><br>
-                <input type="email" id="mail" name="Email : ">
-            </div>
-            <div id="message">
-                <label for="msg">message:</label>
-                <textarea id="msg" name="Message : "></textarea>
-            </div>
-            <div class="button">
-                <button type="submit">Send your message</button>
-            </div>
-        </form>
+    <li data-row="3" data-col="3" data-sizex="1" data-sizey="1">
+      <div data-id="skill_area" data-view="Fullpie" data-title="Programming"></div>
     </li>
+
+  
 
 
 
