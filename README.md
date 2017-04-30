@@ -1,5 +1,8 @@
 
-Personal Website Running on Heroku https://myblogjjoung.herokuapp.com/jjoung
+**NOT RUNNING**
+
+
+Personal Website Running on Heroku 
 
 
 Note: Example of usage
